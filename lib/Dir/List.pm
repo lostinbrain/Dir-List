@@ -9,6 +9,7 @@ use 5.008;
 use strict;
 use warnings;
 
+# This modules should be listed in Makefile.PL as well.
 use Cache::File;
 use Filesys::DiskUsage qw/du/;
 use Clone qw/clone/;
@@ -31,7 +32,7 @@ our @EXPORT = qw(
 );
 
 # Set our version (comes from cvs).
-(our $VERSION) = '$Revision: 1.2 $' =~ /([\d.]+)/;
+(our $VERSION) = '$Revision: 1.3 $' =~ /([\d.]+)/;
 
 # Base constructor
 sub new {
