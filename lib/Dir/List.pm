@@ -32,7 +32,7 @@ our @EXPORT = qw(
 );
 
 # Set our version (comes from cvs).
-(our $VERSION) = '$Revision: 1.3 $' =~ /([\d.]+)/;
+(our $VERSION) = '$Revision: 1.4 $' =~ /([\d.]+)/;
 
 # Base constructor
 sub new {
@@ -68,6 +68,7 @@ sub new {
 sub dirinfo($) {
 	my $self = shift;
 	my $dir = shift;
+	delete $self->{list};
 
 	my $ft = new File::Type;
 
